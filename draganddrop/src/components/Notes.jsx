@@ -29,17 +29,32 @@ const Notes = ({ notes = [], setNotes = () => {}}) => {
     }
   };
   
-  const handleDragsStart = (id,e) => {
-    const noteRef=noteRefs[id].current
+  const handleDragStart = (note, e) => {
+    const { id } = note;
+    const noteRef = noteRefs[id].current
+    const rect = noteRef.getBoundingClientRect();
+    const offsetX = e.clientX - rect.left;
+    const offsetY = e.clientY - rect.top;
+   
+    const startPos = note;
+    const handleMouseMove = () => {
+      const handleMouseUp = () => {
+        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mouseup", handleMouseUp);
+      }
+    }
   }
 
     return (<div>
       {
           notes.map((note) => {
             return <Note key={note.id}
-              ref={noteRefs.current[note.id] ? noteRefs.current[note.id] : (noteRefs.current[note.id] = createRef())}
-              initialPos={note.position} content={note.text}
-              onMouseDown={() => handleDragStart(note.id,e) } />;
+              ref={noteRefs.current[note.id] ?
+                noteRefs.current[note.id] :
+                (noteRefs.current[note.id] = createRef())}
+              initialPos={note.position}
+              content={note.text}
+              onMouseDown={(e) => handleDragStart(note.id,e) } />;
         }) }
   </div>
       
