@@ -1,10 +1,13 @@
-
 import './App.css';
 import HookForm from './HookForm';
+import IntegratingHookForm from './IntegratingHookForm';
+import IntegratingwithUIlibraries from './IntegratingwithUIlibraries';
 function App() {
   return (
     <div className="App">
-     <HookForm/>
+      <HookForm />
+      <IntegratingHookForm />
+      <IntegratingwithUIlibraries/>
     </div>
   );
 }
