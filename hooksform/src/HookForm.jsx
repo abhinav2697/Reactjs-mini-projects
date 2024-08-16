@@ -7,14 +7,22 @@ const HookForm = () => {
   console.log(watch("example"));
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("firstName")} />
+      <label>firstName</label>
+      <input {...register("firstName", { required: true, maxLength: 20 })} /><br/>
+      <label>LastName</label>
+      <input {...register("lastName", { pattern: /^[A-Za-z]+$/i })} /><br></br>
+      <label>Gender</label>
       <select {...register("gender")}>
         <option value="female">female</option>
         <option value="male">male</option>
         <option value="other">other</option>
-      </select>
-      <input defaultValue="test" {...register("example")} />
-      <input {...register("exampleRequired", { required: true })} />
+      </select><br />
+      <label>test</label>
+      <input defaultValue="test" {...register("example")} /><br />
+      <label>exampleRequired</label>
+      <input {...register("exampleRequired", { required: true })} /><br />
+      <label>Age</label>
+      <input {...register("age",{min:18,max:99})}/><br/>
       {errors.exampleRequired && <span>This field is require</span>}
       <input type="submit"/>
     </form>
