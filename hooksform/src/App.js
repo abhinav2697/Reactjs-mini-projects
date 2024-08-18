@@ -5,6 +5,7 @@ import IntegratingHookForm from './IntegratingHookForm';
 import IntegratingwithUIlibraries from './IntegratingwithUIlibraries';
 import YupValidation from "./YupValidation";
 import HandleErrors from './HandleErrors';
+import UseWatch from './useWatch';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <YupValidation />
       <IntegratingControlledInputs />
       <HandleErrors />
+      <UseWatch/>
    
     </div>
   );
