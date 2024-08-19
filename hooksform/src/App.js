@@ -7,7 +7,7 @@ import YupValidation from "./YupValidation";
 import HandleErrors from './HandleErrors';
 import UseWatch from './UseWatch';
 import UseFieldArray from './UseFieldArray';
-
+import CustomRegister from './CustomRegister';
 function App() {
   return (
     <div className="App">
@@ -19,7 +19,7 @@ function App() {
       <HandleErrors />
       <UseWatch />
       <UseFieldArray />
-   
+      <CustomRegister/>
     </div>
   );
 }
