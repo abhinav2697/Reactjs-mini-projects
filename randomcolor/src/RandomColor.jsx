@@ -17,13 +17,14 @@ const RandomColor = () => {
         }
         setColor(hexCOlor);
     }
+
     function handleCreateRandomRgbColor() {
-        
         const r = randomColorUtility(256);
         const g = randomColorUtility(256);
         const b = randomColorUtility(256);
         setColor(`rgb(${r},${g},${b})`);
     }
+    
     useEffect(() => {
         if (typeOfColor === "rgb") handleCreateRandomRgbColor()
         else handleCreateRandomHexColor()
