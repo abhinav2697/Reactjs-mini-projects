@@ -4,12 +4,18 @@ import axios from 'axios';
 const Products = () => {
     const [products,setProducts]=useState();
     useEffect(()=>{
-        const res=axios.get('https://fakestoreapi.com/products')
-        console.log(res.data)
+        fetch('https://fakestoreapi.com/products')
+        .then(data=>data.json())
+        .then(result=>setProducts(result));
     },[])
   return (
-    <div>Products</div>
+    <>
+      <h1>Products</h1>
+      {JSON.stringify(products)}
+    </>
+  
   )
 }
 
 export default Products
+
