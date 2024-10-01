@@ -5,18 +5,19 @@ import Cart from './components/Cart';
 import Products from './components/Products';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {createBrowserRouter,createRoutesFromElements,Route,RouterProvider} from 'react-router-dom';
+import RouteLayout from './components/RouteLayout';
 function App() {
   const router=createBrowserRouter(createRoutesFromElements(
-    <Route>
- <Route index element={<Dashboard/>}> </Route>
- <Route element={<Cart/>}></Route>
+    <Route path="/" element={<RouteLayout/>}>
+ <Route  element={<Dashboard/>}> </Route>
+ <Route path="/cart" element={<Cart/>}></Route>
     </Route>
      
   
   ))
   return (
     <div className="App">
-  <Products/>
+  <RouterProvider router={router}/>
     </div>
   );
 }
