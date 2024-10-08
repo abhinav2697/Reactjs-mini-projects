@@ -6,7 +6,7 @@ import {add} from "../store/cartSlice";
 import  {getProducts}  from '../store/productSlice';
 const Products = () => {
   const dispatch=useDispatch();
-  const {data:products}=useSelector(state=>state.products)
+  const {data:products,status}=useSelector(state=>state.products)
     // const [products,setProducts]=useState();
     useEffect(()=>{
       dispatch(getProducts());
@@ -15,6 +15,13 @@ const Products = () => {
         // .then(result=>setProducts(result));
     },[])
 
+    if(status==='loading'){
+return <p>Loading...</p>
+    }
+
+    if(status==='error'){
+      return <p>Error fetching data! Try again</p>
+    }
     const addToCart=(product)=>{
       // dispatch an add action 
       dispatch(add(product));
