@@ -2,11 +2,12 @@ import {useState,useEffect}  from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useDispatch,useSelector } from 'react-redux';
+import Alert from 'react-bootstrap/Alert';
 import {add} from "../store/cartSlice";
 import  {getProducts}  from '../store/productSlice';
 const Products = () => {
   const dispatch=useDispatch();
-  const {data:products,status}=useSelector(state=>state.products)
+  const {data:products,status}=useSelector(state=>state.products & {})
     // const [products,setProducts]=useState();
     useEffect(()=>{
       dispatch(getProducts());
@@ -20,7 +21,7 @@ return <p>Loading...</p>
     }
 
     if(status==='error'){
-      return <p>Error fetching data! Try again</p>
+      return <Alert>Something went wrong</Alert>
     }
     const addToCart=(product)=>{
       // dispatch an add action 
