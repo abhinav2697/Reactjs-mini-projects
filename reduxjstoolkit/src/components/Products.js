@@ -5,6 +5,7 @@ import { useDispatch,useSelector } from 'react-redux';
 import Alert from 'react-bootstrap/Alert';
 import {add} from "../store/cartSlice";
 import  {getProducts}  from '../store/productSlice';
+import StatusCode from '../utils/StatusCode';
 const Products = () => {
   const dispatch=useDispatch();
   const {data:products,status}=useSelector(state=>state.products & {})
@@ -16,12 +17,12 @@ const Products = () => {
         // .then(result=>setProducts(result));
     },[])
 
-    if(status==='loading'){
+    if(status===StatusCode.LOADING){
 return <p>Loading...</p>
     }
 
-    if(status==='error'){
-      return <Alert>Something went wrong</Alert>
+    if(status===StatusCode.ERROR){
+      return <Alert key="danger" variant='danger'>Something went wrong</Alert>
     }
     const addToCart=(product)=>{
       // dispatch an add action 
