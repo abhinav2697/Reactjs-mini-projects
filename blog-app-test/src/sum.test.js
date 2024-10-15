@@ -14,4 +14,3 @@ test("testing for the sum function",()=>{
     expect(sum(a,b)).toBe(output)
 })
 
-// Ep-4
