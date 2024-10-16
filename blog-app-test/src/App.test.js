@@ -59,4 +59,13 @@ describe.skip("API test case group",()=>{
     let checkInput=screen.getByRole("textbox");
     expect(checkInput).toHaveAttribute("name","username");
   })
+
+  describe("describe inner group",()=>{
+
+    test("api test case 1",()=>{
+      render(<App/>)
+      let checkInput=screen.getByRole("textbox");
+      expect(checkInput).toHaveAttribute("name","username");
+    })
+  })
 })
