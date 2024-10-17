@@ -74,7 +74,7 @@ describe.skip("API test case group",()=>{
 test("on change event testing",()=>{
   render(<App/>)
   let checkInput=screen.getByRole("textbox");
-  fireEvent.change(checkInput,{target:{value:'a'}})
-  expect(checkInput.value).toBe("a");
+  fireEvent.change(checkInput,{target:{value:'abc'}})
+  expect(checkInput.value).toBe("abc");
 })
 
