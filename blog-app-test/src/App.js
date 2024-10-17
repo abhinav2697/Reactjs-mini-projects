@@ -1,7 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const[data,setData]=useState("");
   return (
     <div className="App">
       <p>First React Test case</p>
@@ -19,6 +21,10 @@ function App() {
         title="MY Desk"
         src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*TKfRZ51S8wtYNNvZwGiOMA.jpeg"
       />
+      <br/>
+      <br/>
+      <br/>
+      <input type='text' value={data} onChange={(e)=>setData(e.target.value+"text")}/>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import {render,screen} from '@testing-library/react';
+import {fireEvent,render,screen} from '@testing-library/react';
 import App from './App';
 
 test("Test First React App case",()=>{
@@ -69,3 +69,12 @@ describe.skip("API test case group",()=>{
     })
   })
 })
+
+
+test("on change event testing",()=>{
+  render(<App/>)
+  let checkInput=screen.getByRole("textbox");
+  fireEvent.change(checkInput,{target:{value:'a'}})
+  expect(checkInput.value).toBe("a");
+})
+
