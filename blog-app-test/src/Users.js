@@ -2,7 +2,7 @@ import React from "react";
 
 export default class Users extends React.Component{
 
-    getUserLis(){
+    getUserList(){
         return "user list";
     }
     render(){
