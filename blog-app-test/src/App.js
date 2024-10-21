@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
 import Button from "./Button";
-
+import Users from "./Users";
 function App() {
   const[data,setData]=useState("");
   return (
@@ -27,6 +27,7 @@ function App() {
       <br/>
       <input type='text' value={data} onChange={(e)=>setData(e.target.value+"test")}/>
       <Button/>
+      <Users/>
     </div>
   );
 }

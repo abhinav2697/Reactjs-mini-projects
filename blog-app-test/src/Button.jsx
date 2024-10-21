@@ -5,7 +5,7 @@ const Button = () => {
   return (
     <div className='Button'>
        <h1> Test Click Event with Button</h1>
-       <button onClick={()=>setData("updated data")}>Update Data</button>
+       <button onClick={()=>setData("updated data")}>date Data</button>
       <h1>{data}</h1> 
         </div>
   )
