@@ -3,6 +3,7 @@ import "./App.css";
 import { useState } from "react";
 import Button from "./Button";
 import Users from "./Users";
+import Fc from "./Fc";
 function App() {
   const[data,setData]=useState("");
   return (
@@ -28,6 +29,7 @@ function App() {
       <input type='text' value={data} onChange={(e)=>setData(e.target.value+"test")}/>
       <Button/>
       <Users/>
+      <Fc/>
     </div>
   );
 }
