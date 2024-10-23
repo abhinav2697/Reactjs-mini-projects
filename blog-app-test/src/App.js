@@ -4,6 +4,7 @@ import { useState } from "react";
 import Button from "./Button";
 import Users from "./Users";
 import Fc from "./Fc";
+import GetByRole from "./GetByRole";
 function App() {
   const[data,setData]=useState("");
   return (
@@ -30,6 +31,7 @@ function App() {
       <Button/>
       <Users/>
       <Fc/>
+      <GetByRole/>
     </div>
   );
 }
