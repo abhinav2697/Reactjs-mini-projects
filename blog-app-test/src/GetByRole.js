@@ -17,6 +17,10 @@ const GetByRole = () => {
             <label htmlFor='input1'>User Name</label>
             <input type='text' id='input1'></input>
             <input type='text' id='input2'></input>
+
+            <div role='dummy'>
+              Dummy Text
+            </div>
         </div>
        
   )

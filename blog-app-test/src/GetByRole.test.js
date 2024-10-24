@@ -12,8 +12,10 @@ test("get by Role",()=>{
     // expect(inputField).toBeDisabled();
     // expect(btn).toBeDisabled();
     const input1=screen.getByRole("textbox",{name:"User Name"});
+    const div1=screen.getByRole("dummy");
     expect(input1).toBeInTheDocument();
     expect(btn1).toBeInTheDocument();
     expect(btn2).toBeInTheDocument();
+    expect(div1).toBeInTheDocument();
 })
 
