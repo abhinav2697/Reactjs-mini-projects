@@ -5,6 +5,7 @@ import Button from "./Button";
 import Users from "./Users";
 import Fc from "./Fc";
 import GetByRole from "./GetByRole";
+import GetAllByRole from "./GetAllByRole";
 function App() {
   const[data,setData]=useState("");
   return (
@@ -32,6 +33,7 @@ function App() {
       <Users/>
       <Fc/>
       <GetByRole/>
+      <GetAllByRole/>
     </div>
   );
 }
