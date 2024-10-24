@@ -13,6 +13,10 @@ const GetByRole = () => {
             <h1>Custom Role</h1>
             <button>Click 1</button>
             <button>Click 2</button>
+
+            <label htmlFor='input1'>User Name</label>
+            <input type='text' id='input1'></input>
+            <input type='text' id='input2'></input>
         </div>
        
   )
