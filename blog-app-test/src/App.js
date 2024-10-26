@@ -6,6 +6,7 @@ import Users from "./Users";
 import Fc from "./Fc";
 import GetByRole from "./GetByRole";
 import GetAllByRole from "./GetAllByRole";
+import GetByLabelText from "./GetByLabelText";
 function App() {
   const[data,setData]=useState("");
   return (
@@ -35,6 +36,7 @@ function App() {
       <Fc/>
       <GetByRole/>
       <GetAllByRole/>
+      < GetByLabelText/>
     </div>
   );
 }
