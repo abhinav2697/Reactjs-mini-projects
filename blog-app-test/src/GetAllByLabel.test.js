@@ -11,3 +11,12 @@ test("input test case",()=>{
         expect(label[i]).toHaveValue("abhinav");
     }
 })
+
+test("checkbox input test case",()=>{
+    render(<GetAllByLabelText/>)
+    const checkbox=screen.getAllByLabelText("Skills");
+    for(let i=0;i<checkbox.length;i++){
+        expect(checkbox[i]).toBeInTheDocument();
+    }
+    
+})
