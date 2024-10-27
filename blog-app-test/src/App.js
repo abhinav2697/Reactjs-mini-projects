@@ -7,6 +7,7 @@ import Fc from "./Fc";
 import GetByRole from "./GetByRole";
 import GetAllByRole from "./GetAllByRole";
 import GetByLabelText from "./GetByLabelText";
+import GetAllByLabelText from "./GetAllByLabelText";
 function App() {
   const[data,setData]=useState("");
   return (
@@ -37,6 +38,7 @@ function App() {
       <GetByRole/>
       <GetAllByRole/>
       < GetByLabelText/>
+      <GetAllByLabelText/>
     </div>
   );
 }
