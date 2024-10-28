@@ -8,6 +8,7 @@ import GetByRole from "./GetByRole";
 import GetAllByRole from "./GetAllByRole";
 import GetByLabelText from "./GetByLabelText";
 import GetAllByLabelText from "./GetAllByLabelText";
+import GetByPlaceholderText from "./GetByPlaceholderText";
 function App() {
   const[data,setData]=useState("");
   return (
@@ -39,6 +40,7 @@ function App() {
       <GetAllByRole/>
       < GetByLabelText/>
       <GetAllByLabelText/>
+      <GetByPlaceholderText/>
     </div>
   );
 }

@@ -17,6 +17,7 @@ test("checkbox input test case",()=>{
     const checkbox=screen.getAllByLabelText("Skills");
     for(let i=0;i<checkbox.length;i++){
         expect(checkbox[i]).toBeInTheDocument();
+        expect(checkbox[i]).toBeChecked();
     }
     
 })
