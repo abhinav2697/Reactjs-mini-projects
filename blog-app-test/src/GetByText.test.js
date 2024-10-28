@@ -24,6 +24,9 @@ test("single p tag testing",()=>{
 test("multiple h1 tag testing",()=>{
     render(<GetByText/>);
     const head=screen.getAllByText("h1 test");
-    expect(head[1]).toBeInTheDocument();
+    // expect(head[1]).toBeInTheDocument();
+    for(let i=0;i<head.length;i++){
+        expect(head[i]).toBeInTheDocument();
+    }
 
 })
