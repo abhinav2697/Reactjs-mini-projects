@@ -5,7 +5,7 @@ const GetByText = () => {
     <div>
         <h1>RTL Query: getByText </h1>
         <button>Login</button>
-        <p>P tag testing</p>
+        <p className='para' id='p1'>P tag testing</p>
         <h1>h1 test</h1>
         <h1>h1 test</h1>
     </div>

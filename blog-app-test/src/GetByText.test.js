@@ -11,6 +11,8 @@ test("single p tag testing",()=>{
     render(<GetByText/>);
     const ptag=screen.getByText("P tag testing");
     expect(ptag).toBeInTheDocument();
+    expect(ptag).toHaveClass('para');
+    expect(ptag).toHaveAttribute('id')
 
 })
 
