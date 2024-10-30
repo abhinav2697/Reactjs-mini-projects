@@ -7,7 +7,14 @@ const GetDisplayValue = () => {
         <input type="text" defaultValue={"abhi"}/>
         <br/>
         <br/>
+
+        <input type="text" defaultValue={"abhi"}/>
+        <br/>
+        <br/>
         <textarea defaultValue={"abhinav"}/>
+        <br/>
+        <br/>
+        <input type="radio" defaultValue={"mail"}/>
         </div>
   )
 }
