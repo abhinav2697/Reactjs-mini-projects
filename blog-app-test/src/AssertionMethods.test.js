@@ -21,4 +21,5 @@ test("testing negative cases",()=>{
     expect(btn).toBeInTheDocument();
     expect(btn).not.toHaveClass('btn');
     expect(btn).not.toHaveAttribute('id');
+    expect(btn).not.toBeEnabled();
 })

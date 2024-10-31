@@ -12,7 +12,7 @@ const AssertionMethods = () => {
         // disabled
         data-test="dummy"
         />
-        <button className='btn1' name="btn-id">Click Me</button>
+        <button className='btn1' name="btn-id" disabled>Click Me</button>
         
         </div>
   )
