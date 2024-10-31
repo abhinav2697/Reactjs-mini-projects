@@ -8,3 +8,13 @@ test("",()=>{
 
 
 })
+
+
+test("span testing with title attribute ",()=>{
+    render(<GetByTitle/>);
+    const btn=screen.getAllByTitle("black spade suit");
+    for(let i=0;i<btn.length;i++){
+    expect(btn[i]).toBeInTheDocument();
+    }
+
+})
