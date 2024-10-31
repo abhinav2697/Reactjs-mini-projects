@@ -11,6 +11,7 @@ import GetAllByLabelText from "./GetAllByLabelText";
 import GetByPlaceholderText from "./GetByPlaceholderText";
 import GetByTestId from "./GetByTestId";
 import GetDisplayValue from "./GetDisplayValue";
+import GetByTitle from "./GetByTitle";
 function App() {
   const[data,setData]=useState("");
   return (
@@ -45,6 +46,7 @@ function App() {
       <GetByPlaceholderText/>
       <GetByTestId/>
       <GetDisplayValue/>
+      <GetByTitle/>
     </div>
   );
 }
