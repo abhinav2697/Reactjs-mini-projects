@@ -13,6 +13,7 @@ import GetByTestId from "./GetByTestId";
 import GetDisplayValue from "./GetDisplayValue";
 import GetByTitle from "./GetByTitle";
 import GetAllByAltText from "./GetAllByAltText";
+import AssertionMethods from "./AssertionMethods";
 function App() {
   const[data,setData]=useState("");
   return (
@@ -49,6 +50,7 @@ function App() {
       <GetDisplayValue/>
       <GetByTitle/>
       <GetAllByAltText/>
+      <AssertionMethods/>
     </div>
   );
 }
