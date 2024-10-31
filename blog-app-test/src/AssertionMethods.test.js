@@ -14,3 +14,11 @@ test("",()=>{
     expect(input).toHaveClass("test-style")
     expect(input).toHaveClass("dummy")
 })
+
+test("testing negative cases",()=>{
+    render(<AssertionMethods/>);
+    const btn=screen.getByRole("button");
+    expect(btn).toBeInTheDocument();
+    expect(btn).not.toHaveClass('btn');
+    expect(btn).not.toHaveAttribute('id');
+})
