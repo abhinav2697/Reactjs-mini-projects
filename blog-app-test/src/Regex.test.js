@@ -12,5 +12,6 @@ test("text match with string1",()=>{
     render(<Regex/>)
     // const div=screen.getByText(/Hello/);
     // const div=screen.getByText(/lo World/);
+    const div=screen.getByText(/Hello w?orld/i)
     expect(div).toBeInTheDocument();
 })
