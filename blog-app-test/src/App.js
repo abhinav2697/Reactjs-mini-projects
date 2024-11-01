@@ -14,6 +14,7 @@ import GetDisplayValue from "./GetDisplayValue";
 import GetByTitle from "./GetByTitle";
 import GetAllByAltText from "./GetAllByAltText";
 import AssertionMethods from "./AssertionMethods";
+import Regex from "./Regex";
 function App() {
   const[data,setData]=useState("");
   return (
@@ -51,6 +52,7 @@ function App() {
       <GetByTitle/>
       <GetAllByAltText/>
       <AssertionMethods/>
+      <Regex/>
     </div>
   );
 }
