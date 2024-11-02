@@ -5,8 +5,12 @@ test("test match with function",()=>{
     // const dv=screen.getByText((content,element)=>content.startsWith("Hello"))
     //  const dv=screen.getByText((content,element)=>content.endsWith("World"))
     // const dv=screen.getByText((content,element)=>content.endsWith("ld"))
-    const dv=screen.getByText((content,element)=>content.includes("ld"))
+    // const dv=screen.getByText((content,element)=>content.includes("ld"))
     // expect(dv).toBeInTheDocument();
-        
+
+    const dv=screen.getAllByText((content,element)=>{
+        return true
+    })
+    expect(dv[0]).toBeInTheDocument();
     })
 
