@@ -15,6 +15,7 @@ import GetByTitle from "./GetByTitle";
 import GetAllByAltText from "./GetAllByAltText";
 import AssertionMethods from "./AssertionMethods";
 import Regex from "./Regex";
+import QueryBy from "./QueryBy";
 function App() {
   const[data,setData]=useState("");
   return (
@@ -53,6 +54,7 @@ function App() {
       <GetAllByAltText/>
       <AssertionMethods/>
       <Regex/>
+      <QueryBy/>
     </div>
   );
 }
