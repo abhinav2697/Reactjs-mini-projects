@@ -8,9 +8,9 @@ test("test match with function",()=>{
     // const dv=screen.getByText((content,element)=>content.includes("ld"))
     // expect(dv).toBeInTheDocument();
 
-    const dv=screen.getAllByText((content,element)=>{
-        return true
+    const dv=screen.getByText((content,element)=>{
+        return content.length==11
     })
-    expect(dv[0]).toBeInTheDocument();
+    expect(dv).toBeInTheDocument();
     })
 
