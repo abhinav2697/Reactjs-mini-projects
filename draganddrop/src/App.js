@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './App.css';
-import Notes from './components/Notes';
+import Notes from './components/Notes'
 
 function App() {
   const [notes,setNotes] = useState([
