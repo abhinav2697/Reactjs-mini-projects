@@ -1,4 +1,4 @@
-import ScrollIndicator from "./ScrollIndicator";
+import ScrollIndicator from "./ScrollIndicator"
 
 function App() {
   return (
